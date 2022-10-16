@@ -1,5 +1,5 @@
 # SpotlasFeed
-Test, Omer Mohamoud Jama
+Omer Mohamoud Jama
 
 MVVM Architecture,
 Utils folder contains constants and mediaquery calculations.
