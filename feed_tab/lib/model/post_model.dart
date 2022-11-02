@@ -23,7 +23,7 @@ class PostModel {
     });
 
     final String id;
-    final Caption caption;
+    final Caption? caption;
     final List<Media> media;
     final DateTime createdAt;
     final Author author;
@@ -46,7 +46,7 @@ class PostModel {
 
     Map<String, dynamic> toJson() => {
         "id": id,
-        "caption": caption.toJson(),
+        "caption": caption?.toJson(),
         "media": List<dynamic>.from(media.map((x) => x.toJson())),
         "created_at": createdAt.toIso8601String(),
         "author": author.toJson(),
@@ -103,11 +103,11 @@ class Caption {
         required this.tags,
     });
 
-    final String text;
+    final String? text;
     final List<Tag>? tags;
 
     factory Caption.fromJson(Map<String, dynamic> json) => Caption(
-        text: json["text"],
+        text: json["text"] ?? "",
         tags: json["tags"] == null ? null : List<Tag>.from(json["tags"].map((x) => Tag.fromJson(x))),
     );
 

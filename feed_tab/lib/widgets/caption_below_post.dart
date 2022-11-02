@@ -20,7 +20,7 @@ class CaptionBelowPost extends StatelessWidget {
       child: Align(
         alignment: Alignment.topLeft,
         child: ReadMoreText(
-          postModel.caption.text,
+          postModel.caption!.text!,
           style: const TextStyle(
               fontFamily: 'SF Pro Display', fontSize: 15, wordSpacing: -0.5),
           trimMode: TrimMode.Line,
