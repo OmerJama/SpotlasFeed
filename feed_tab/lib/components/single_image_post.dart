@@ -33,14 +33,14 @@ class SingleImagePost extends StatelessWidget {
               height: getProportionateScreenHeight(468),
               width: ScreenSize.screenWidth,
               child: BlurHash(
-                hash: postModel.media.first.blurHash,
+                hash: postModel.media.first.blurHash!,
                 image: postModel.media.first.url,
               ),
             ),
             Row(
               children: [
                 ImageCircle(
-                    blurhashText: postModel.spot.logo.blurHash,
+                    blurhashText: postModel.spot.logo.blurHash!,
                     linearGradient: const LinearGradient(colors: [
                       pGradientColourPrimary,
                       pGradientColourSecondary,
@@ -69,7 +69,7 @@ class SingleImagePost extends StatelessWidget {
               child: Row(
                 children: [
                   ImageCircle(
-                      blurhashText: postModel.spot.logo.blurHash,
+                      blurhashText: postModel.spot.logo.blurHash!,
                       linearGradient: const LinearGradient(colors: [
                         blankColour,
                         blankColour,
